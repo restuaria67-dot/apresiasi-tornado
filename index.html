@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresiasi Pelanggan Tornado Printing</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eaf3ff, #ffffff);
+  color: #172554;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: PUTIH;
+  width: 100%;
+  max-width: 520px;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px #00000012;
+  text-align: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0755a5;
+  margin-bottom: 25px;
+}
+
+.logo span {
+  color: #f59e0b;
+}
+
+.badge {
+  display: inline-block;
+  background: #0F4D87;
+  color: WHITE;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 27px;
+  margin: 10px 0;
+  line-height: 1.3;
+}
+
+p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.brand {
+  color: #0755a5;
+  font-weight: bold;
+}
+
+.highlight {
+  background: #f0f7ff;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 22px 0;
+}
+
+.highlight h2 {
+  color: #0755a5;
+  font-size: 34px;
+  margin: 5px 0;
+}
+
+.voucher {
+  border: 2px dashed #f59e0b;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 22px 0;
+}
+
+.voucher h2 {
+  color: #0755a5;
+  font-size: 36px;
+  margin: 8px 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  resize: vertical;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #0755a5;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #063d79;
+}
+
+.footer {
+  font-size: 12px;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="logo">
+    TORNADO <span>PRINTING</span>
+  </div>
+
+  <div class="badge">
+    TOP 10 TERBANYAK BULAN INI
+  </div>
+
+  <h1>Selamat atas pencapaianmu!</h1>
+
+  <p>
+    Halo, <span class="brand">Kopi Gowessan</span>!
+    Selamat atas pencapaian luar biasa bisnis kamu
+    bulan ini.
+  </p>
+
+  <div class="highlight">
+    <p>
+      Telah mencetak sebanyak
+    </p>
+
+    <h2>50.000 CUP</h2>
+
+    <p>
+      dan menjadi salah satu dari 10 customer
+      dengan jumlah cetakan terbanyak di
+      Tornado Printing bulan ini!
+    </p>
+  </div>
+
+  <p>
+    Terima kasih telah mempercayakan kebutuhan
+    packaging bisnis kamu kepada Tornado Printing.
+    Semoga Kopi Gowessan semakin sukses,
+    semakin ramai pelanggan, dan terus berkembang!
+  </p>
+
+  <div class="voucher">
+    <p>HADIAH SPESIAL UNTUK KAMU</p>
+
+    <h2>Rp500.000</h2>
+
+    <p>
+      Potongan harga spesial untuk pemesanan
+      packaging berikutnya.
+    </p>
+  </div>
+
+  <h3>Pesan & Saran</h3>
+
+  <p>
+    Kami ingin terus memberikan pelayanan terbaik.
+    Yuk, bagikan pengalaman atau saran kamu
+    untuk Tornado Printing!
+  </p>
+
+  <textarea
+    id="saran"
+    placeholder="Tulis pesan atau saran kamu di sini..."
+  ></textarea>
+
+  <button onclick="kirimSaran()">
+    Kirim Pesan
+  </button>
+
+  <div class="footer">
+    Tornado Printing • Packaging Partner Bisnis Kamu
+  </div>
+
+</div>
+
+<script>
+function kirimSaran() {
+  const saran = document.getElementById("saran").value.trim();
+
+  if (!saran) {
+    alert("Yuk, tulis pesan atau saran kamu terlebih dahulu!");
+    return;
+  }
+
+  const pesan = encodeURIComponent(
+    "Halo Tornado Printing!\n\n" +
+    "Saya dari Kopi Gowessan.\n" +
+    "Berikut pesan dan saran saya:\n" + saran
+  );
+
+  // Ganti dengan nomor WhatsApp admin Tornado Printing.
+  const nomorAdmin = "08117010220";
+
+  window.open(
+    "https://wa.me/" + 08117010220 + "?text=" + pesan,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
+
+
+
